@@ -17,17 +17,9 @@ class MongoDBSettings(BaseSettings):
     # MONGO_DB: str = "hcmai2025"
 
 
-
-
-
-
 class IndexPathSettings(BaseSettings):
     FAISS_INDEX_PATH: str | None  
     USEARCH_INDEX_PATH: str | None
-
-
-
-
 
 class KeyFrameIndexMilvusSetting(BaseSettings):
     COLLECTION_NAME: str = "keyframe"
@@ -37,9 +29,7 @@ class KeyFrameIndexMilvusSetting(BaseSettings):
     INDEX_TYPE: str = 'FLAT'
     BATCH_SIZE: int =10000
     SEARCH_PARAMS: dict = {}
-
-
-
+    
 class AppSettings(BaseSettings):
     DATA_FOLDER: str  = "data"
     ID2INDEX_PATH: str = "id2index.json"
