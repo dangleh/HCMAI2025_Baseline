@@ -263,7 +263,7 @@ if st.session_state.search_results:
     for i, result in enumerate(sorted_results):
         with st.container():
             col_img, col_info = st.columns([1, 3])
-            
+            print(f"PATH: {result['path']}")
             with col_img:
                 # Try to display image if path is accessible
                 try:

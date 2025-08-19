@@ -5,11 +5,16 @@ load_dotenv()
 
 
 class MongoDBSettings(BaseSettings):
-    MONGO_HOST: str = Field(..., alias='MONGO_HOST')
-    MONGO_PORT: int = Field(..., alias='MONGO_PORT')
-    MONGO_DB: str = Field(..., alias='MONGO_DB')
-    MONGO_USER: str = Field(..., alias='MONGO_USER')
-    MONGO_PASSWORD: str = Field(..., alias='MONGO_PASSWORD')
+    MONGO_HOST: str = Field("localhost", alias='MONGO_HOST')
+    MONGO_PORT: int = Field(27017, alias='MONGO_PORT')
+    MONGO_DB: str = Field("hcmai2025", alias='MONGO_DB')
+    MONGO_USER: str = Field("root", alias='MONGO_USER')
+    MONGO_PASSWORD: str = Field("example", alias='MONGO_PASSWORD')
+    # MONGO_HOST: str = "localhost"
+    # MONGO_PORT: str = "27017"
+    # MONGO_USER: str = "root"
+    # MONGO_PASSWORD: str = "example"
+    # MONGO_DB: str = "hcmai2025"
 
 
 
@@ -36,6 +41,6 @@ class KeyFrameIndexMilvusSetting(BaseSettings):
 
 
 class AppSettings(BaseSettings):
-    DATA_FOLDER: str  = "/media/tinhanhnguyen/Data3/Projects/HCMAI2025_Baseline/data/keyframe"
-    ID2INDEX_PATH: str = "/media/tinhanhnguyen/Data3/Projects/HCMAI2025_Baseline/data/id2index.json"
+    DATA_FOLDER: str  = "data"
+    ID2INDEX_PATH: str = "id2index.json"
     MODEL_NAME: str = "hf-hub:laion/CLIP-convnext_xxlarge-laion2B-s34B-b82K-augreg-soup"

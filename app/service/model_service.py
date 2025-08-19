@@ -8,7 +8,8 @@ class ModelService:
         model ,
         preprocess ,
         tokenizer ,
-        device: str='cuda'
+        # device: str='cuda'
+        device: str='cpu'
         ):
         self.model = model
         self.model = model.to(device)
